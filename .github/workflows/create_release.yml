@@ -9,7 +9,7 @@ jobs:
   printInputs:
     runs-on: ubuntu-latest
     steps:
-      # Do a full checkout
+      # Do a full checkout (all branches)
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
