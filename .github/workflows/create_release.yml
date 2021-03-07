@@ -1,0 +1,19 @@
+on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag'
+        required: true
+
+jobs:
+  printInputs:
+    runs-on: ubuntu-latest
+    steps:
+      # Do a full checkout (all branches)
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - uses: ./.github/actions/terraform-module-release
+        with:
+          release-branch: release

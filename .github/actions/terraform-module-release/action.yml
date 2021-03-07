@@ -1,0 +1,24 @@
+name: terraform-module-release
+description: Release terraform modules.
+author: Felix Haus
+inputs:
+  release-branch:
+    description: >
+      The name of the release branch.
+    default: release
+  release-tag:
+    description: >
+      The tag that should be created for the release
+    default: ${{ github.event.inputs.tag }}
+  token:
+    description: >
+      Personal access token (PAT) used to fetch the repository.
+    default: ${{ github.token }}
+
+branding:
+  icon: git-merge
+  color: white
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
