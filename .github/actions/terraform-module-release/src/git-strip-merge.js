@@ -23,7 +23,10 @@ module.exports = async function gitStripMerge(
   git,
   branch,
   excludePaths,
-  { deleteCommitMessage = 'delete commit', mergeCommitMessage = 'merge commit' }
+  {
+    deleteCommitMessage = 'delete commit',
+    mergeCommitMessage = 'merge commit',
+  } = {}
 ) {
   async function gitBranch(refName) {
     // Get current head
