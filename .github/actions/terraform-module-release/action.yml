@@ -18,3 +18,7 @@ inputs:
 branding:
   icon: git-merge
   color: white
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
