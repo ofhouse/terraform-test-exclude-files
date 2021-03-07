@@ -6144,6 +6144,7 @@ exports.prefixedArray = prefixedArray;
 /***/ 4351:
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __nccwpck_require__) => {
 
+const path = __nccwpck_require__(5622);
 const core = __nccwpck_require__(2186);
 const simpleGit = __nccwpck_require__(1477);
 
