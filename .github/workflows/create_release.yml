@@ -14,6 +14,9 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: ./.github/actions/terraform-module-release
+      - uses: dealmore/gh-action-terraform-module-release@main
         with:
+          upstream-branch: main
           release-branch: release
+          release-tag: ${{ github.event.inputs.tag }}
+          exclude: '["src/*"]'
